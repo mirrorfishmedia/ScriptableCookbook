@@ -883,6 +883,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyParent Lizard
       objectReference: {fileID: 0}
+    - target: {fileID: 6873575101671659987, guid: 8d6ce72deae52814b9126cb1c227d137,
+        type: 3}
+      propertyPath: vulnerableDamageTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e4ff75a4b9995ee44bb8289e1f7272dc,
+        type: 2}
     - target: {fileID: 8109305392131168403, guid: 8d6ce72deae52814b9126cb1c227d137,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1714,7 +1720,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyParent Snake
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3962308077677652537, guid: 2e6afca388e2ca54ea89897e93688916, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e6afca388e2ca54ea89897e93688916, type: 3}
 --- !u!1 &1089097688
 GameObject:
@@ -2478,6 +2485,7 @@ MonoBehaviour:
   hitForce: 100
   gunEnd: {fileID: 713741011}
   laserLight: {fileID: 1505249023}
+  damageType: {fileID: 11400000, guid: 8146363515c708846b76090145e044db, type: 2}
 --- !u!120 &1505249020
 LineRenderer:
   m_ObjectHideFlags: 0

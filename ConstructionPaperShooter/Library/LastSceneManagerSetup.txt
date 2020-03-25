@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/ConstructionPaper/ConstructionPaperMain.unity
+- path: Assets/ConstructionPaper/EnumExample.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

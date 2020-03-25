@@ -9,6 +9,7 @@ public class RayCastShootComplete : MonoBehaviour {
 	public float hitForce = 100f;										// Amount of force which will be added to objects with a rigidbody shot by the player
 	public Transform gunEnd;											// Holds a reference to the gun end object, marking the muzzle location of the gun
     public Light laserLight;
+    public DamageType damageType;
 
 	private Camera fpsCam;												// Holds a reference to the first person camera
 	private WaitForSeconds shotDuration = new WaitForSeconds(0.17f);	// WaitForSeconds object used by our ShotEffect coroutine, determines time laser line will remain visible
@@ -63,7 +64,7 @@ public class RayCastShootComplete : MonoBehaviour {
 				if (health != null)
 				{
 					// Call the damage function of that script, passing in our gunDamage variable
-					health.Damage (gunDamage);
+					health.Damage (gunDamage, damageType);
 				}
                 else
                 {
@@ -77,7 +78,9 @@ public class RayCastShootComplete : MonoBehaviour {
 					// Add force to the rigidbody we hit, in the direction from which it was hit
 					hit.rigidbody.AddForce (-hit.normal * hitForce);
 				}
-			}
+
+                damageType.SpawnPrefabEffect(hit.point);
+            }
 			else
 			{
 				// If we did not hit anything, set the end of the line to a position directly in front of the camera at the distance of weaponRange

@@ -101,6 +101,8 @@ MonoBehaviour:
   deathActions:
   - {fileID: 11400000, guid: 0a6ad908f2f46e743931a86eafdcf8bd, type: 2}
   - {fileID: 11400000, guid: 6b9e62aa07b3c7d4ba8dbde861f207e2, type: 2}
+  vulnerableDamageTypes:
+  - {fileID: 11400000, guid: 8146363515c708846b76090145e044db, type: 2}
 --- !u!1001 &3428542339077757361
 PrefabInstance:
   m_ObjectHideFlags: 0
